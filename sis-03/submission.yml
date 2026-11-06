@@ -1,0 +1,61 @@
+# SIS #03 — the declaration. FACTS ONLY: every explanation stays in report.md.
+#
+# Fill this in LAST, after your final run of the checker, then validate it:
+#     python tests/check_sis.py
+#     python tests/validate_submission.py
+#
+# Your checker numbers are re-run by the instructor at the head of your pull request.
+# Numbers that do not match what that commit produces cost the whole workflow criterion.
+# A FAIL you report honestly — here and under known_fails — costs nothing extra.
+#
+# Format rules: two spaces for indentation, never tabs. Leave the keys exactly as they are.
+
+schema: 1
+assignment: "sis-03"            # do not edit
+
+student:
+  name:                         # as in the university register
+  student_id: 24B030314
+  group: Monday 16:00-19:00
+  github: sanzhar700
+
+assistant:
+  tool: Codex desktop
+  model: not displayed
+
+bolt:
+  model: not displayed
+  project_url: not-shared
+
+language:
+  name: python
+  path: A
+
+reuse:                          # exactly as in report.md section 1
+  python_v1: fresh
+  web_v1: week-06
+
+checker:                        # from your LAST run of python tests/check_sis.py
+  pass: 50
+  fail: 5
+  error: 0
+  commit: PENDING
+
+counts:                         # the validator re-measures every one
+  tests: 16
+  exchanges: 4
+  issues: 2
+  critique_decisions: 3
+  reflection_words: 147
+
+cases:                          # from report.md section 5
+  python_final_matches: 11
+  page_final_matches: 12
+
+known_fails: [X1, X2, X3, X4, X5]
+
+honesty:
+  v1_unedited: yes
+  screenshots_unedited: yes
+  results_observed: yes
+  ai_usage_disclosed: yes
