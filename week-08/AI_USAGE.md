@@ -8,7 +8,7 @@ including anything an AI tool produced.
 | --- | --- | --- | --- |
 | Codex | model not displayed | diagnosis without the skill (Task 4) | not run |
 | Codex | model not displayed | diagnosis with bug-detector (Task 5) | not run |
-| Codex | model not displayed | copied the supplied function, added regression tests, made both one-line fixes, created skill/report draft, and ran tests/checker | `app/src/booking.ts`, `app/src/booking.test.ts`, `skills/bug-detector/SKILL.md`, `lab-report.md` |
+| Codex | model not displayed | copied the supplied function, added regression tests, made both one-line fixes, created skill/report draft, and ran tests/checker | `app/src/booking.ts`, `app/src/booking.test.ts`, `skills/bug-detector/SKILL.md`, `lab-report.md`, `AI_USAGE.md` |
 
 **`skills/bug-detector/SKILL.md` was typed by me from the deck's text, not generated:** no — generated from the supplied handout text
 

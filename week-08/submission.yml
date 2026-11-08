@@ -28,7 +28,7 @@ checker:
   pass: 26
   fail: 4
   error: 1
-  commit: 1dcd8bb
+  commit: fb8e2f7
   known_fails: [E1, L3, L4, L5, L9]
 
 verdict:
