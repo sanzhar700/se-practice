@@ -1,0 +1,46 @@
+schema: 1
+week: "08"
+
+student:
+  name: not provided
+  student_id: not provided
+  github: not provided
+
+assistant:
+  tool: Codex
+  model: not displayed
+
+skill:
+  environment:
+  invoked: no
+
+project:
+  language: ts
+  vitest: 2.1.9
+
+counts:
+  tests_final: 19
+  buggy_failed: 4
+  defects_logged: 2
+  lines_changed: 2
+
+checker:
+  pass: 26
+  fail: 4
+  error: 1
+  commit: fb8e2f7
+  known_fails: [E1, L3, L4, L5, L9]
+
+verdict:
+  skill_helped:
+
+review_findings:
+  - "BUG-A: <= and >= treated endpoint contact as overlap; BUG-A, T01, and T08 expose it."
+  - "BUG-B: bookings.push mutated the input array; BUG-B and the AC5 assertion expose it after BUG-A is fixed."
+  - "AC5: the original touching case was rejected before the mutation ran, so the BUG-A failure hid BUG-B."
+
+honesty:
+  buggy_function_pasted_unchanged: yes
+  same_input_both_chats: no
+  outputs_unedited: no
+  ai_usage_disclosed: yes

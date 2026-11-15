@@ -1,0 +1,35 @@
+schema: 1
+week: "09"
+
+student:
+  name: "Sanzhar Sansyzbayev"
+  student_id: "24B030314"
+  github: "sanzhar700"
+
+assistant:
+  tool: "ChatGPT"
+  model: "not displayed"
+  fresh_chats: "yes"
+
+calls:
+  r3: "asked"
+  first_run_s_fails: 0
+
+checker:
+  pass: 30
+  fail: 0
+  error: 0
+  commit: "f5bd1a9"
+  known_fails: []
+
+review_findings:
+  - "S03: the schema refuses end as a string, while valid end values are integer minutes."
+  - "R2: the model converted 14:00 to 840 and 16:30 to 990, and included blocked: true."
+  - "R3: the model asked for exact start and end times instead of inventing them."
+  - "A8: sending .env to an unverified MCP server could expose credentials."
+
+honesty:
+  definition_written_by_me: "no"
+  calls_unedited: "yes"
+  outputs_unedited: "yes"
+  ai_usage_disclosed: "yes"
