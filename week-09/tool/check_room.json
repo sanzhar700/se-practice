@@ -1,0 +1,54 @@
+{
+  "name": "check_room",
+  "description": "Check whether a room is available for a requested time interval. Give start, end, and now as whole minutes since midnight, from 0 to 1440; for example, 10:00 is 600 and 24:00 is 1440. Set blocked to true if the room cannot be used. List existing bookings as start and end minute values. This tool only checks availability and does not create or save a booking.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "start": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1440,
+        "description": "Requested start time in whole minutes since midnight."
+      },
+      "end": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1440,
+        "description": "Requested end time in whole minutes since midnight."
+      },
+      "now": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 1440,
+        "description": "Current time in whole minutes since midnight."
+      },
+      "blocked": {
+        "type": "boolean",
+        "description": "Whether the room is blocked and cannot be used."
+      },
+      "bookings": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1440
+            },
+            "end": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1440
+            }
+          },
+          "required": ["start", "end"],
+          "additionalProperties": false
+        },
+        "description": "Existing bookings, each with start and end in whole minutes since midnight."
+      }
+    },
+    "required": ["start", "end", "now", "blocked", "bookings"],
+    "additionalProperties": false
+  }
+}
