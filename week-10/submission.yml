@@ -1,0 +1,52 @@
+# week-10/submission.yml — facts for this lab; explanations are in lab-report.md.
+schema: 1
+week: "10"
+
+student:
+  name: "Sanzhar Sansyzbayev"
+  student_id: "24B030314"
+  github: "sanzhar700"
+
+assistant:
+  tool: "Codex"
+  model: "GPT-6 (version not displayed)"
+  environment: "other"
+
+project:
+  starting_point: "week-08"
+  baseline_commit: "5149991"
+  language: "ts"
+  vitest: "2.1.9"
+
+counts:
+  claims_challenged: 6
+  risks_registered: 5
+  risks_confirmed: 5
+  tests_final: 20
+  agents_lines_changed: 11
+
+audit:
+  level: 0
+
+decision:
+  top_two: [R2, R1]
+  mitigated: [R1, R2]
+  release: "conditional"
+
+checker:
+  pass: 29
+  fail: 0
+  error: 2
+  commit: "766bb8a"
+  known_fails: [E1, E2]
+
+review_findings:
+  - "R1: baseline src/App.tsx contained two rooms, contrary to one-room scope; the failing test confirmed it."
+  - "AC4: the endpoint-overlap claim was checked against strict comparisons and endpoint tests."
+  - "R2: AGENTS.md named nonexistent test:unit and permitted real timetable, database/login and production deployment."
+
+honesty:
+  review_was_read_only: "no"
+  agents_patch_approved_by_me: "yes"
+  outputs_unedited: "yes"
+  ai_usage_disclosed: "yes"
