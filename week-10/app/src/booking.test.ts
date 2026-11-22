@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { canBook } from './booking';
-import { ROOMS } from './App';
+import { ROOMS } from './rooms';
 
 describe('canBook: first generated suite', () => {
   const base = () => ({ now: 540, blocked: false, bookings: [{ start: 600, end: 660 }] });

@@ -1,17 +1,10 @@
 import { useState } from 'react';
 import { canBook } from './booking';
+import { ROOMS } from './rooms';
 
 // Starter for students with no Week 06 project. The availability decision lives INSIDE this
 // component on purpose: Task 1 of Practice #07 is to extract it into src/booking.ts as
 // canBook({ start, end, now, blocked, bookings }) without changing what the page does.
-
-type Interval = { start: number; end: number };
-type Room = { id: string; name: string; blocked: boolean; bookings: Interval[] };
-
-export const ROOMS: Room[] = [
-  { id: 'a101', name: 'Room A-101', blocked: false, bookings: [{ start: 600, end: 660 }] },
-  { id: 'b204', name: 'Room B-204', blocked: false, bookings: [] },
-];
 
 const toMinutes = (value: string) => {
   const [h, m] = value.split(':').map(Number);
