@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { canBook } from './booking';
+import { ROOMS } from './App';
 
 describe('canBook: first generated suite', () => {
   const base = () => ({ now: 540, blocked: false, bookings: [{ start: 600, end: 660 }] });
@@ -41,4 +42,8 @@ test('BUG-B AC5: available request does not change bookings', () => {
   const before = structuredClone(bookings);
   expect(canBook({ now: 540, blocked: false, bookings, start: 720, end: 780 })).toBe(true);
   expect(bookings).toEqual(before);
+});
+
+test('R1 scope: the checker contains only one fictional room', () => {
+  expect(ROOMS).toHaveLength(1);
 });
